@@ -1,17 +1,18 @@
 import React from "react";
+import Info from "./Info";
 
-
-function Main() {
-    
-    return (
-        <section>
-            <img></img>
-            <h2>Title of Image</h2>
-            <div>
-                <p>Description of Image</p>
-            </div>
-        </section>
-    );
-}
+const Main = props => {
+	return (
+		<section>
+			<img src={props.image}></img>
+            <Info
+                title={props.title}
+                date={props.date}
+                desc={props.desc}
+                credit={props.credit}
+            />
+		</section>
+	);
+};
 
 export default Main;
