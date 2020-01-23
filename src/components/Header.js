@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const LogoImg = styled.img`
-	width:8%;
+	width:10%;
+	margin:.5%;
 `;
 
 const HeaderContent = styled.header`
@@ -10,8 +11,7 @@ const HeaderContent = styled.header`
 	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 35%;
-	margin-top: -30%;
+	margin-bottom: 25%;	
 	-webkit-text-stroke-width: 0.2px;
 	-webkit-text-stroke-color: black;
 `;

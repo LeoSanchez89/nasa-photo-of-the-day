@@ -1,15 +1,15 @@
 import React from "react";
 import Info from "./Info";
 import styled from "styled-components";
-import Header from "./Header";
+
 
 const BgImg = styled.img`
 	width: 100%;
-	border-radius: 2%;
+	border-radius: 1%;
 `;
 
 const ConstContainer = styled.section`
-	padding: 1%;
+	padding: .4%;
 	box-sizing: border-box;
 	position: relative;
 	

@@ -7,11 +7,12 @@ const CenterTxt = styled.div`
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -30%);
+	transform: translate(-50%, -60%);
 	width: 80%;
 	font-weight: bold;
 	-webkit-text-stroke-width: 0.2px;
 	-webkit-text-stroke-color: black;
+	text-align:center;
 `;
 
 // const AlignHeader = styled.div
