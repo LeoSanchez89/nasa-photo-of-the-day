@@ -1,6 +1,7 @@
 import React from "react";
 import Info from "./Info";
 import styled from "styled-components";
+import Header from "./Header";
 
 const BgImg = styled.img`
 	width: 100%;
@@ -8,15 +9,16 @@ const BgImg = styled.img`
 `;
 
 const ConstContainer = styled.section`
-	margin: 1.5%;
+	padding: 1%;
 	box-sizing: border-box;
 	position: relative;
+	
 `;
 
 const Main = props => {
 	return (
 		<ConstContainer>
-			<BgImg src={props.image}></BgImg>
+            <BgImg src={props.image}></BgImg>
 			<Info
 				title={props.title}
 				date={props.date}

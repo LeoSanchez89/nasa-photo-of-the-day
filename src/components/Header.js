@@ -9,8 +9,11 @@ const HeaderContent = styled.header`
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	align-items:center;
-	margin-bottom: -2%;
+	align-items: center;
+	margin-bottom: 35%;
+	margin-top: -30%;
+	-webkit-text-stroke-width: 0.2px;
+	-webkit-text-stroke-color: black;
 `;
 
 
