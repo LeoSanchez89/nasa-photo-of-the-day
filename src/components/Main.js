@@ -6,6 +6,10 @@ import styled from "styled-components";
 const BgImg = styled.img`
 	width: 100%;
 	border-radius: 1%;
+	object-fit: scale;
+	min-height: 900px;
+	max-height:900px;
+	
 `;
 
 const ConstContainer = styled.section`
@@ -13,12 +17,13 @@ const ConstContainer = styled.section`
 	box-sizing: border-box;
 	position: relative;
 	width: 100%;
+	
 `;
 
 const Main = props => {
 	return (
 		<ConstContainer>
-			<BgImg src={props.image}></BgImg>
+			<BgImg src={props.image} alt ="Awesome Image of Space"></BgImg>
 			<Info
 				title={props.title}
 				date={props.date}
