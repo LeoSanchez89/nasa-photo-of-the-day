@@ -11,7 +11,9 @@ const HeaderContent = styled.header`
 	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 25%;	
+	margin-top:-5%;
+	margin-bottom: 10%;	
+	margin-right:3%;
 	-webkit-text-stroke-width: 0.2px;
 	-webkit-text-stroke-color: black;
 `;
