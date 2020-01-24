@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Fade } from "reactstrap";
 import styled from "styled-components";
 import Header from "./Header";
+import "../App.css";
 
 
 const CenterTxt = styled.div`
@@ -24,7 +25,7 @@ const Info = props => {
 
 	return (
 		<CenterTxt>
-			<Header />
+			<Header className="title" />
 			<h2 className="text-warning">{props.title}</h2>
 
 			<p className="text-white">Date: {props.date}</p>

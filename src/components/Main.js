@@ -23,7 +23,7 @@ const ConstContainer = styled.section`
 const Main = props => {
 	return (
 		<ConstContainer>
-			<BgImg src={props.image} alt ="Awesome Image of Space"></BgImg>
+			<BgImg className="pic" src={props.image} alt ="Awesome Image of Space"></BgImg>
 			<Info
 				title={props.title}
 				date={props.date}
