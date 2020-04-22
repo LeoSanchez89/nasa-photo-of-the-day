@@ -29,7 +29,7 @@ function App() {
 				"https://api.nasa.gov/planetary/apod?api_key=6sB4kv1NcAGeod7XynQfAToMLoWFO6hW0QmYGLnL&count=1"
 			)
 			.then(response => {
-				console.log(response.data[0]);
+				// console.log(response.data[0]);
 				setPics(response.data[0]);
 			})
 			.catch(error => {
