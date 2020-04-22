@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Header from "./Header";
 import "../App.css";
 
-
 const CenterTxt = styled.div`
 	position: absolute;
 	top: 50%;
@@ -15,10 +14,9 @@ const CenterTxt = styled.div`
 	-webkit-text-stroke-width: 0.2px;
 	-webkit-text-stroke-color: black;
 	text-align: center;
-	
 `;
 
-const Info = props => {
+const Info = (props) => {
 	const [fadeIn, setFadeIn] = useState(false);
 
 	const toggle = () => setFadeIn(!fadeIn);
@@ -36,8 +34,11 @@ const Info = props => {
 
 			<Fade in={fadeIn} tag="h5" className="mt-3">
 				<p className="text-warning">{props.desc}</p>
-				<p className="text-white">Photo Credit: {props.credit}</p>
-				
+				{props.credit ? (
+					<p className="text-white">Photo Credit: {props.credit}</p>
+				) : (
+					<p className="text-white">Photo Credit: N/A</p>
+				)}
 			</Fade>
 		</CenterTxt>
 	);

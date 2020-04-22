@@ -6,36 +6,34 @@ import { Button } from "reactstrap";
 
 function App() {
 	const [pics, setPics] = useState([]);
-	
+
 	useEffect(() => {
 		axios
 			.get(
 				"https://api.nasa.gov/planetary/apod?api_key=6sB4kv1NcAGeod7XynQfAToMLoWFO6hW0QmYGLnL"
 			)
-			.then(response => {
-				// console.log(response.data);
+			.then((response) => {
+				// console.log("initial response data", response.data);
 				setPics(response.data);
 			})
-			.catch(error => {
+			.catch((error) => {
 				console.log("data was not returned", error);
 			});
 	}, []);
 
-	 
-	function randomDay() {
-
+	const randomDay = () => {
 		axios
 			.get(
 				"https://api.nasa.gov/planetary/apod?api_key=6sB4kv1NcAGeod7XynQfAToMLoWFO6hW0QmYGLnL&count=1"
 			)
-			.then(response => {
-				// console.log(response.data[0]);
+			.then((response) => {
+				// console.log("random button data", response.data[0]);
 				setPics(response.data[0]);
 			})
-			.catch(error => {
+			.catch((error) => {
 				console.log("data was not returned", error);
 			});
-	}
+	};
 
 	return (
 		<div className="App">
@@ -46,11 +44,19 @@ function App() {
 				date={pics.date}
 				desc={pics.explanation}
 				credit={pics.copyright}
+				media={pics.media_type}
+				randomDay={randomDay}
 			/>
-			<Button className="rand" color="danger" size="lg" onClick={() => randomDay()}>Random Day</Button>
+			<Button
+				className="rand"
+				color="danger"
+				size="lg"
+				onClick={() => randomDay()}
+			>
+				Random Day
+			</Button>
 		</div>
 	);
 }
 
 export default App;
-
